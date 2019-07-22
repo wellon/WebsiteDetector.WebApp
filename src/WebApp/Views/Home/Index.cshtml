@@ -4,12 +4,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-2">Websites availability checker</h1>
-    <ul>
-        @foreach (var item in Model)
-        {
-            <li>@Html.DisplayFor(modelItem => item.Name) | @Html.DisplayFor(modelItem => item.Status)</li>
-        }
-    </ul>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Websites availability checker</h1>
+        <h5>Press start button below</h5>
+        <input type="button" id="startButton" value="Start" />
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <ul id="updatesList"></ul>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/update.js"></script>
