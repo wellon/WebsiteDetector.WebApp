@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using BusinessLogicLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
 
@@ -10,9 +7,17 @@ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IWebsitesService websitesService;
+
+        public HomeController(IWebsitesService websitesService)
+        {
+            this.websitesService = websitesService;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var data = websitesService.GetWebsites();
+            return View(data);
         }
 
         public IActionResult Privacy()
