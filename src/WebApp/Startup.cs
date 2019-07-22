@@ -1,4 +1,5 @@
 ﻿using System;
+using BusinessLogicLayer.Extensions;
 using DataAccessLayer.EF;
 using DataAccessLayer.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -32,9 +33,10 @@ namespace WebApp
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
             services.AddDbContext<DbContext, DataContext>(opt => { opt.UseInMemoryDatabase("in-memory-db"); });
             services.AddDALServices();
+            services.AddBLLServices();
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\WebApp\WebApp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{947057DD-B855-4947-B06A-1F6210A461D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "src\DataAccessLayer\DataAccessLayer.csproj", "{808B096A-AFDE-4221-BC63-5A88C89FF899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "src\DataAccessLayer\DataAccessLayer.csproj", "{808B096A-AFDE-4221-BC63-5A88C89FF899}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{98FF899A-9966-4746-BBD3-627B5A1EC4A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "src\BusinessLogicLayer\BusinessLogicLayer.csproj", "{AE796267-228C-4A66-959A-50312AC44A4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +27,17 @@ Global
 		{808B096A-AFDE-4221-BC63-5A88C89FF899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{808B096A-AFDE-4221-BC63-5A88C89FF899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{808B096A-AFDE-4221-BC63-5A88C89FF899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE796267-228C-4A66-959A-50312AC44A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE796267-228C-4A66-959A-50312AC44A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE796267-228C-4A66-959A-50312AC44A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE796267-228C-4A66-959A-50312AC44A4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{808B096A-AFDE-4221-BC63-5A88C89FF899} = {947057DD-B855-4947-B06A-1F6210A461D8}
+		{AE796267-228C-4A66-959A-50312AC44A4A} = {98FF899A-9966-4746-BBD3-627B5A1EC4A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3A617602-2181-4492-9798-3D8E0E1CBFAA}
