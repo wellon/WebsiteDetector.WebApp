@@ -1,6 +1,7 @@
 ﻿using System;
 using BusinessLogicLayer.Extensions;
 using BusinessLogicLayer.Hubs;
+using BusinessLogicLayer.Services;
 using DataAccessLayer.EF;
 using DataAccessLayer.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +36,7 @@ namespace WebApp
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSignalR();
+            services.AddHostedService<Worker>();
 
             services.AddDbContext<DbContext, DataContext>(opt => { opt.UseInMemoryDatabase("in-memory-db"); });
             services.AddDALServices();
