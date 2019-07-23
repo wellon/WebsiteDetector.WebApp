@@ -9,11 +9,20 @@ connection.on("Update", function (data) {
 
     data.forEach(function(d) {
         var li = document.createElement("li");
-        var msg = d.name + " " + d.url;
-        console.log(msg);
+
+        if (d.status === false) {
+            li.className = "list-group-item list-group-item-danger";
+        }
+        else {
+            li.className = "list-group-item list-group-item-success";
+        }
+
+        var msg = d.name + " " + d.status;
         li.textContent = msg;
         document.getElementById("updatesList").appendChild(li);
     });
+
+    $("#myToast").toast('show');
 });
 
 connection.start();

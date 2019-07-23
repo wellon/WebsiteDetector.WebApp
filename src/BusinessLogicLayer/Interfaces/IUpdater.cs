@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using DataAccessLayer.Entities;
+using BusinessLogicLayer.DTO;
 
 namespace BusinessLogicLayer.Interfaces
 {
     public interface IUpdater
     {
-        Task Update(List<Website> data);
+        Task Update(List<WebsiteDTO> data);
     }
 }

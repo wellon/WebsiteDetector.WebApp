@@ -34,14 +34,14 @@ namespace WebApp
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddSignalR();
-            services.AddHostedService<Worker>();
-
             services.AddDbContext<DbContext, DataContext>(opt => { opt.UseInMemoryDatabase("in-memory-db"); });
             services.AddDALServices();
             services.AddBLLServices();
             services.AddAutoMapper();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSignalR();
+            services.AddHostedService<Worker>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
