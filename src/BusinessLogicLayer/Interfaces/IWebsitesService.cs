@@ -7,6 +7,5 @@ namespace BusinessLogicLayer.Interfaces
     {
         IEnumerable<WebsiteDTO> GetWebsites();
         void AddNewWebSite(CreateWebsiteDTO createWebsiteDTO);
-        bool IsWebsiteExist(CreateWebsiteDTO createWebsiteDTO);
     }
 }

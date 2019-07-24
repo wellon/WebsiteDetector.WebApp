@@ -36,13 +36,18 @@ namespace BusinessLogicLayer.Services
             }
 
             var website = mapper.Map<Website>(createWebsiteDTO);
+
+            //костыль из-за in-memory-db
+            var idOfLastElement = repository.GetAll().Last().Id;
+            website.Id = idOfLastElement + 1;
+
             repository.Add(website);
             uow.SaveChanges();
         }
 
         public bool IsWebsiteExist(CreateWebsiteDTO createWebsiteDTO)
         {
-            return repository.Get(w => w.Url == createWebsiteDTO.Name).Any();
+            return repository.Get(w => w.Url == createWebsiteDTO.Url).Any();
         }
     }
 }
