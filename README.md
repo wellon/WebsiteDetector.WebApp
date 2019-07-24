@@ -6,4 +6,5 @@ ASP.NET app for websites availability checking.
 ##### 2. Compile app: 
 Execute build.bat
 ##### 3. Run app: 
-Execute start.bat
+Execute start.bat  
+Open browser and go to https://localhost:5001 
